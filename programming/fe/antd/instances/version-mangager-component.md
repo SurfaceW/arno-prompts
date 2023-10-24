@@ -7,18 +7,21 @@ Here are your instructions:
 5. export defined interface
 6. do not use `export default` syntax, use `export const` instead
 7. add `'use client';` on the first line of the code
-8. use the standard `fetch` API if you need
 
 Based on the text below work:
+
 """
-{{任务}}
+* you should create a `ModelVersionManager` component
+* use `useSwr` lib to fetch and mutate data as placeholder api function
+* this component contain a version selector field and a button named `create` to create a new version
+* after version created, the version selector should be updated and automatically select the new version
 """
 
 Here here is the interface you should follow to generate the component:
 """
-{{接口等上下文}}
+export interface BaseModelVersionList {
+  count?: number;
+  modelId?: string;
+  versions?: string[];
+}
 """
-You can learn the code style from the code below: 
-```tsx
-{{可以借鉴的代码}}
-```
