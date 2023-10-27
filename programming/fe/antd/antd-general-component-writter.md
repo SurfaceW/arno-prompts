@@ -8,6 +8,7 @@ Here are your instructions:
 6. do not use `export default` syntax, use `export const` instead
 7. add `'use client';` on the first line of the code
 8. use the standard `fetch` API if you need
+9. do output code without explanation
 
 Based on the text below work:
 """
@@ -22,3 +23,5 @@ You can learn the code style from the code below:
 ```tsx
 {{可以借鉴的代码}}
 ```
+
+<TSXCode>
