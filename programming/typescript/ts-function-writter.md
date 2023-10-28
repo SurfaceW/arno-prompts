@@ -13,6 +13,7 @@ export const isBrowser = (): boolean => {
 * Make sure you have considered all the possible cases.
 * Make sure about the type safety & durability.
 * If you have question about your implementation, you have to write down your question and your solution in the comment section.
+* [Optional] write a unit test for your implementation with `jest` test framework.
 
 ---
 
