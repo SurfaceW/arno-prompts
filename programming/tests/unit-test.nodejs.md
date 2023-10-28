@@ -28,7 +28,6 @@ export const singleton = <T extends new (...args: any[]) => any>(classTarget: T)
       return target[SINGLETON_KEY];
     },
   });
-
 ```
 
 Here is your extra requirements:
