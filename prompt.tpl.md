@@ -18,6 +18,8 @@
 ## Examples and Instances
 
 
+### [ExampleName]
+
 ```md
 [Example]
 ```
