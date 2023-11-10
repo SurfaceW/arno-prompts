@@ -15,7 +15,7 @@
 [Prompt Content]
 ```
 
-## Examples and Instances
+## Examples
 
 
 ### [ExampleName]

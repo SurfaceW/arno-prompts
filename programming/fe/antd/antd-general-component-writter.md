@@ -16,7 +16,7 @@ Generate AntDesign component with TypeScript and React Hook Style.
 Here are your instructions:
 
 1. use AntDesign Component Library to create a component
-2. use TypeScript
+2. use TypeScript version 5
 3. use React Hook Style
 4. generate the text start with ```tsx and end with ```
 5. export defined interface

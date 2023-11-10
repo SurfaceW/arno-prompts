@@ -1,123 +1,146 @@
-Your current role is:A code generator.
+# Antd Pro Table Component Generator
 
-##
+- author: Arno
+- date: 2023-11-10
+- version: 0.0.1
+- models: gpt-4
+
+## Description
+
+Antd Complex table generator with following features:
+
+* support pagination
+* support use `swr` to control the data fetching
+* support add more features related logic if use more context gpt models
+
+
+## Prompt
 
 Here are your instructions:
 
-1. Use AntDesign Component Library to create a component
-2. Use TypeScript
-3. Use React Hook Style
-4. Generate the text start with ```tsx and end with ```
-5. Export defined interface
-6. Do not use `export default` syntax, use `export const` instead
-7. add `'use client';` on the first line of the code
+1. use AntDesign Library to create a component
+2. use `tailwindcss` to handle custom style if needed
+3. Use TypeScript version 5
+4. use React Hook Style
+5. generate the text start with ```tsx and end with ```
+6. export defined interface if needed
+7. do not use `export default` syntax, use `export const` instead
+8. add `'use client';` on the first line of the code
+9. use `swr` library to handle the data fetching and mutation
+10. **do output code without explanation**
 
 Based on the text below work:
 
 """
-* write a table with the fields based on the interface with *** marker below
-* Table should have an action column with actions: {{表格行 actions}}
-{{额外任务}}
+* you generate a table to show uploaded files
+* write a table with the fields based on the interface defined below
+* the request api is `POST /api/common/upload/info` use `api.post()` to fetch the data without pagination once fetch all data
+* its read-only table
+* [optional] table should have an action column with actions: {{Action Descriptor List}}
+
+{{Extra Task Description}}
+
 """
 
-Here here is the interface you should follow to genenrate the component:
+Here is the interface you should follow to generate the component:
 
-***
-{{表格数据声明接口}}
-***
+```ts
+interface IResponseFileListData {
+  code: number;
+  reason: string;
+  message: string;
+  data: Data;
+  requestId: string;
+}
+
+interface Data {
+  files: File[];
+}
+
+interface File {
+  fileId: string;
+  downloadLink: string;
+  meta: Meta;
+}
+
+interface Meta {
+  etag: string;
+  lastModified: string;
+  size: string;
+  type: string;
+}
+{{Table Row Data Interface}}
+```
+
 
 You can learn the code style from the code below: 
 
 """
-export const DataSetTable: FC<DataSetTableProps> = ({ data, total, onRemove, onDetail }) => {
-  const router = useRouter();
-  const { pagination, setPagination, isTableLoading, tableData } = useTablePagination<
-    ResponseDatasetMeta[]
-  >(
-    (pagination) => {
-      const urlSearchParams = new URLSearchParams();
-      urlSearchParams.append('pageSize', pagination?.pageSize?.toString() || '');
-      urlSearchParams.append('current', pagination?.current?.toString() || '');
-      const res = api.get(`/api/ai-ops/dataset`, urlSearchParams);
-      return res as Promise<IOffsetPaginationData<ResponseDatasetMeta[]>>;
-    },
-    {
-      initTableData: data,
-      initPagination: {
-        total,
-        current: 1,
-      },
-    }
-  );
+{{Code Example}}
+"""
 
-  const columns: TableColumnType<Partial<ResponseDatasetMeta>>[] = [
-    {
-      title: 'xxx',
-      key: 'code',
-      dataIndex: 'code',
-      width: 200,
-      ellipsis: true,
-    },
-    {
-      title: '创建时间',
-      dataIndex: 'createdAt',
-      key: 'createdAt',
-      width: 160,
-      render: (text: string) => dayjs(text).format('YYYY-MM-DD HH:mm'),
-    },
-    // more to go with ResponseClusterResourceVO described
-    {
-      title: '操作',
-      key: 'action',
-      fixed: 'right',
-      width: 200,
-      render: (text: string, record: T) => (
-        <Space size={'small'} split="|">
-          <Button
-            type="link"
-            onClick={() => {
-              if (onDetail) {
-                onDetail && onDetail(record);
-              } else {
-                router.push(`/ai-ops/dataset/${record.code}`);
-              }
-            }}
-          >
-            --
-          </Button>
-        </Space>
-      ),
-    },
+## Examples and Instances
+
+### Prompt Example output
+
+with GPT-4
+
+```tsx
+'use client';
+
+import { Table } from 'antd';
+import { ColumnProps } from 'antd/es/table';
+import { useSWR } from 'swr';
+import { api } from 'api/api';
+import { FC } from 'react';
+
+interface IResponseFileListData {
+  code: number;
+  reason: string;
+  message: string;
+  data: Data;
+  requestId: string;
+}
+
+interface Data {
+  files: File[];
+}
+
+interface File {
+  fileId: string;
+  downloadLink: string;
+  meta: Meta;
+}
+
+interface Meta {
+  etag: string;
+  lastModified: string;
+  size: string;
+  type: string;
+}
+
+export const FileTable: FC = () => {
+  const { data, error } = useSWR<IResponseFileListData>('/api/common/upload/info', api.post);
+
+  const columns: ColumnProps<File>[] = [
+    { title: 'File Id', dataIndex: 'fileId', key: 'fileId' },
+    { title: 'Download Link', dataIndex: 'downloadLink', key: 'downloadLink' },
+    { title: 'Etag', dataIndex: ['meta', 'etag'], key: 'etag' },
+    { title: 'Last Modified', dataIndex: ['meta', 'lastModified'], key: 'lastModified' },
+    { title: 'Size', dataIndex: ['meta', 'size'], key: 'size' },
+    { title: 'Type', dataIndex: ['meta', 'type'], key: 'type' },
   ];
 
+  if (error) return <div>Error loading data</div>;
+
   return (
-    <>
-      <Button
-        type="primary"
-        className="mb-4"
-        onClick={() => {
-          router.push('/matrix/tenant/creator');
-        }}
-      >
-        xxx
-      </Button>
-      <Table
-        scroll={\{ x: 1400 \}}
-        loading={isTableLoading}
-        size="small"
-        pagination={pagination}
-        onChange={(pag) => {
-          if (pag.current?.toString() !== pagination.current?.toString()) {
-            setPagination({
-              ...pagination,
-              ...pag,
-            });
-          }
-        }}
-        dataSource={tableData || []}
-        columns={columns}
-      />
-    </>
+    <Table<File>
+      className="w-full"
+      loading={!data}
+      dataSource={data?.data.files}
+      columns={columns}
+      rowKey="fileId"
+    />
   );
 };
-"""
+```
