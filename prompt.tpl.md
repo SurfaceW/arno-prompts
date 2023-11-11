@@ -4,6 +4,7 @@
 - date: [Date]
 - version: [Version]
 - models: [Models]
+- pattern: chatbot | agent | completion | ...
 
 ## Description
 
@@ -11,9 +12,7 @@
 
 ## Prompt Structure
 
-```md
-[Prompt Content]
-```
+> write your prompt structure here with markdown format
 
 ## Examples
 
