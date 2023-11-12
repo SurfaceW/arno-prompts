@@ -4,6 +4,7 @@
 - date: 2023-11-08
 - version: 0.0.1
 - models: gpt-3.5 / gpt-4
+- pattern: completion
 
 ## Description
 

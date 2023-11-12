@@ -66,7 +66,7 @@ Confirmation of the presence of a node at the specified position is done using t
 
 I want to fully replace a node's children contents with purly markdown string and I want to markdown string can be understood to proseMirror's block and content structure, how may I implement such feature?
 
-## Reference
+---
 
 In order to replace a node's children with a Markdown string that can be understood by ProseMirror's block and content structure, you need to:
 
@@ -116,6 +116,7 @@ Please note that the `prosemirror-markdown` package is used to parse the Markdow
 
 Also, remember that you need to handle errors and edge cases according to your application's needs. For instance, you might want to check if the node at the given position can accept the parsed fragment as its content, or if the Markdown string is valid.
 
+## Reference
 
 [Reference]
 
