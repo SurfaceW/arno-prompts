@@ -24,73 +24,79 @@ Based on the context given below work:
 
 ```
 {
-  "code": 1,
-  "message": "OK",
-  "result": {
-    "0xdd466e9c060694aff06abdde57615282d7239562": {
-      "anti_whale_modifiable": "0",
-      "buy_tax": "0",
-      "can_take_back_ownership": "0",
-      "cannot_buy": "0",
-      "cannot_sell_all": "0",
-      "creator_address": "0x15ea7c32526076ccc06a62383e6e654c11147cc5",
-      "creator_balance": "0",
-      "creator_percent": "0.000000",
-      "dex": [
-        {
-          "name": "UniswapV2",
-          "liquidity": "2762.38854260",
-          "pair": "0x807df86b367411fb31ba88c97d2baa2f9575f52e"
+  "statusCode": 200,
+  "data": {
+    "audit": {
+      "is_contract_renounced": true,
+      "codeVerified": true,
+      "date": "2023-11-12T14:40:17.454Z",
+      "lockTransactions": false,
+      "mint": false,
+      "provider": "GoPlus",
+      "proxy": false,
+      "status": "OK",
+      "unlimitedFees": false,
+      "version": 1
+    },
+    "decimals": 18,
+    "info": {
+      "description": "",
+      "email": "",
+      "extraInfo": "",
+      "nftCollection": "",
+      "ventures": false
+    },
+    "links": {
+      "bitbucket": "",
+      "discord": "",
+      "facebook": "",
+      "github": "",
+      "instagram": "",
+      "linkedin": "",
+      "medium": "",
+      "reddit": "",
+      "telegram": "",
+      "tiktok": "",
+      "twitter": "",
+      "website": "",
+      "youtube": ""
+    },
+    "logo": "",
+    "metrics": {
+      "maxSupply": 6900000000,
+      "totalSupply": 6900000000,
+      "holders": 23,
+      "txCount": 34
+    },
+    "name": "Bibo",
+    "symbol": "BIBO",
+    "totalSupply": "6900000000000000000000000000",
+    "creationBlock": 18556366,
+    "reprPair": {
+      "id": {
+        "chain": "ether",
+        "exchange": "univ2",
+        "pair": "0x4c480c0bad0ceb725542366c64da065b1df2ce56",
+        "token": "0xbe7a294e1e4579c755aea702b298a2b0fda92303",
+        "tokenRef": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      },
+      "price": 0.0000015501969347754543
+    },
+    "pairs": [
+      {
+        "address": "0x4c480c0bad0ceb725542366c64da065b1df2ce56",
+        "exchange": "univ2",
+        "dextScore": 0,
+        "price": 0.0000015501969347754543,
+        "tokenRef": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "name": "Wrapped Ether",
+          "symbol": "WETH"
         }
-      ],
-      "external_call": "0",
-      "hidden_owner": "0",
-      "holder_count": "158",
-      "holders": [
-        {
-          "address": "0x807df86b367411fb31ba88c97d2baa2f9575f52e",
-          "tag": "UniswapV2",
-          "is_contract": 1,
-          "balance": "704706375.811057689",
-          "percent": "0.704706375811057689",
-          "is_locked": 0
-        },
-      ],
-      "honeypot_with_same_creator": "0",
-      "is_anti_whale": "1",
-      "is_blacklisted": "0",
-      "is_honeypot": "0",
-      "is_in_dex": "1",
-      "is_mintable": "0",
-      "is_open_source": "1",
-      "is_proxy": "0",
-      "is_whitelisted": "1",
-      "lp_holder_count": "2",
-      "lp_holders": [
-        {
-          "address": "0xe2fe530c047f2d85298b07d9333c05737f1435fb",
-          "tag": "TeamFinance",
-          "is_contract": 1,
-          "balance": "0.948683298050512799",
-          "percent": "0.999999999999998945",
-          "is_locked": 1
-        },
-      ],
-      "lp_total_supply": "0.948683298050513799",
-      "owner_address": "0x0000000000000000000000000000000000000000",
-      "owner_balance": "0",
-      "owner_change_balance": "0",
-      "owner_percent": "0.000000",
-      "personal_slippage_modifiable": "0",
-      "selfdestruct": "0",
-      "sell_tax": "0",
-      "slippage_modifiable": "1",
-      "token_name": "Jujutsu Kaisen",
-      "token_symbol": "JUJU",
-      "total_supply": "1000000000",
-      "trading_cooldown": "0",
-      "transfer_pausable": "0"
-    }
+      }
+    ],
+    "chain": "ether",
+    "address": "0xbe7a294e1e4579c755aea702b298a2b0fda92303"
   }
 }
 ```
