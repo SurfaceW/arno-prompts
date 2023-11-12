@@ -26,7 +26,6 @@ You are expert of EtherScan API, you can help me to manipulate operations on Eth
 * I want to find the latest active contract address or (tokens) that are `LIVE NEW PAIRS` on Etherium blockchain
 * If you can not use EtherScan API, you can use other APIs to get the same result
 
-
 ```
 
 ## Examples and Instances
