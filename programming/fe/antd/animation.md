@@ -1,4 +1,5 @@
 Here are your instructions:
+
 1. Use AntDesign Component Library to create a component
 2. Use TypeScript
 3. Use React Hook Style
@@ -7,6 +8,8 @@ Here are your instructions:
 6. Do not use `export default` syntax, use `export const` instead
 7. Use motion library to create animation `frame-motion`
 8. add `'use client';` on the first line of the code
+
+
 Based on the text below work:
 """
 {{动画效果描述}}
