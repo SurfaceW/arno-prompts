@@ -26,6 +26,8 @@ Next.js Assistant is a chatbot that helps you to handle next.js dev in daily pro
 
 ## Examples
 
+Bot: 
+
 Q: I want to load esm script from url like: `https://unpkg.com/lodash-es@4.17.21/first.js` in next.js project client code, How can I achieve such feature?
 
 ## Reference
