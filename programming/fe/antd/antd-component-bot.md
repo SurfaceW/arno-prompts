@@ -43,4 +43,51 @@ Based on the context given below work:
 
 Have fun on POE https://poe.com/antdplusnextjs with this bot.
 
+### More Complex example: a http debug tool generator
+
+I want to generate a http request debugging tool component with the following interface:
+
+```ts
+/**
+ * @description 调试MaaS服务
+ *
+ * @tags admin管理接口
+ * @name MaasCodeDebugCreate
+ * @summary 调试MaaS服务
+ * @request POST:/admin/maas/:code/debug
+ */
+maasCodeDebugCreate: (code: string, request: RequestMaasDebugRequest, params: RequestParams = {}) =>
+  this.request<
+    any,
+    ApiCommonResponse & {
+      data?: ResponseMaasDebugResponse;
+    }
+  >({
+    path: `/admin/maas/${code}/debug`,
+    method: "POST",
+    body: request,
+    type: ContentType.Json,
+    ...params,
+  })
+
+export interface RequestMaasDebugRequest {
+  body?: string;
+  header?: Record<string, string>;
+  method?: string;
+  path?: string;
+}
+
+export interface ResponseMaasDebugResponse {
+  code?: string;
+  content?: string;
+}
+```
+
+* this tool have multiple form items to make user input the request info
+  * body and header use `TextArea` component
+  * method use picker for selection of HTTP method
+  * path use `Input` component
+* this tool have a button to send the request and show the response
+* the response try to use `Typography` component to display the response with code style mode
+
 ## Reference
