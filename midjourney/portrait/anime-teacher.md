@@ -1,0 +1,1 @@
+/imagine prompt: a teacher is standing in front of a blackboard teaching students of junior class, she is beautiful with long hair and smile with anime style::3 anime::3  --aspect 1:1 --version 5.2 --quality 1 
