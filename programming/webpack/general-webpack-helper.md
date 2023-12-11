@@ -32,4 +32,4 @@ webpack(config, function (err) {
 
 """
 
-Try to figure out the reason webpack do not output any files to build direcotry.
+Try to figure out the reason webpack do not output any files to build directory.
