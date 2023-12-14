@@ -1,0 +1,1 @@
+a Solution Architect girl is standing in front of a table of blue-print in a workshopt, she is beautiful with long hair and smile with anime style,::2 light scenario ::2 for avatar usages ::3 anime::3 --aspect 1:1 --version 5.2
