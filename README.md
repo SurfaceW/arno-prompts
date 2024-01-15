@@ -67,7 +67,16 @@ Use lang-chain or related tool / framework to systematically interact with the m
 ## Prompt List
 
 ```
+.
 ├── README.md
+├── auto-gpt-prompt.summary.md
+├── auto-gpt.prompt.raw.md
+├── basic-prompt-framework.arno.md
+├── chain-of-thought.arno.md
+├── coze-bilibili-assistant
+├── coze-official-prompt-tpl.md
+├── crispe-prompt-framework.arno.md
+├── dalle-3.md
 ├── information
 │   ├── html-long-context-crawler.md
 │   ├── html-long-context-table-generator.md
@@ -82,10 +91,18 @@ Use lang-chain or related tool / framework to systematically interact with the m
 │   └── nutrient-advisor.md
 ├── midjourney
 │   ├── avatar
-│   │   └── manga.md
+│   │   ├── manga.md
+│   │   └── sa.md
 │   ├── icon
 │   │   └── ai-studio.md
-│   └── midj-generator.md
+│   ├── midj-generator.md
+│   └── portrait
+│       └── anime-teacher.md
+├── patterns
+│   ├── basic-prompt-framework.pattern.md
+│   ├── crispe.prompt.framework.pattern.md
+│   ├── promgramming.pattern.md
+│   └── react.prompt.framework.pattern.md
 ├── programming
 │   ├── biz
 │   │   ├── crawler.md
@@ -97,11 +114,13 @@ Use lang-chain or related tool / framework to systematically interact with the m
 │   │   ├── instances
 │   │   │   └── json2prisma.r1.md
 │   │   ├── json2prisma.md
+│   │   ├── prisma-assistant.md
 │   │   ├── prisma-schema-designer.md
 │   │   └── prisma-validator.md
+│   ├── deisgn
+│   │   └── plantuml.md
 │   ├── fe
 │   │   ├── antd
-│   │   │   ├── animation.md
 │   │   │   ├── antd-component-bot.md
 │   │   │   ├── antd-component-converter.md
 │   │   │   ├── antd-form-generator.md
@@ -109,12 +128,15 @@ Use lang-chain or related tool / framework to systematically interact with the m
 │   │   │   ├── antd-info-fields.md
 │   │   │   ├── antd-pro-table-component.md
 │   │   │   ├── antd-statistic-info-generator.md
+│   │   │   ├── examples
 │   │   │   └── prisma-schema2form.md
 │   │   ├── editor
 │   │   │   └── prose-mirror.dev.md
-│   │   ├── general-assistant.md
-│   │   └── react
-│   │       └── react-helper.md
+│   │   ├── fe-general-animation.md
+│   │   ├── fe-general-assistant.md
+│   │   ├── react
+│   │   │   └── react-helper.md
+│   │   └── vscode-assistant.md
 │   ├── full-stack
 │   │   ├── client-table-crud-operation.md
 │   │   ├── curd-client-detail-page.md
@@ -124,9 +146,14 @@ Use lang-chain or related tool / framework to systematically interact with the m
 │   │   ├── prisma-nextjs-api-route-resource-get-update.md
 │   │   ├── prisma-schema-based-api-generator.md
 │   │   ├── sever-page-generator.md
-│   │   └── ui-form-drawer-update-and-create.md
+│   │   ├── ui-form-drawer-update-and-create.md
+│   │   └── x-state
+│   │       ├── x-state-helper.bot.md
+│   │       └── x-state-vision.md
 │   ├── json
 │   │   └── json-operator.md
+│   ├── nextjs
+│   │   └── nextjs-assistant.md
 │   ├── node.js
 │   │   ├── code-enhancement.md
 │   │   ├── general-function.writer.md
@@ -168,12 +195,14 @@ Use lang-chain or related tool / framework to systematically interact with the m
 │   ├── prompt-advisor.md
 │   ├── prompt-optimizer.md
 │   └── prompt-writter.md
+├── re-act.prompt-framework.arno.md
+├── stock-wiz.md
+├── thinking
+│   └── mental-model.md
 ├── web3
 │   ├── ether-scan.md
 │   └── ethernum.bot.md
 └── writting
     ├── article-reviser.md
     └── article-translator-helper.md
-
-35 directories, 73 files
 ```
