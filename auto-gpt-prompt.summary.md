@@ -1,3 +1,8 @@
+
+# GPT summarized via GPT4-32k
+
+[source](auto-gpt.prompt.raw.md)
+
 Based on the information provided, here are some prompt examples constructed to align with the context and structure of AutoGPT:
 
 ### Prompt Example to Plan
