@@ -1,14 +1,19 @@
 ## General Patterns
 
-1. First Principles（第一性原理）：梳理最核心需求与边界  
-2. YAGNI：只实现当前真正需要的功能  
-3. KISS：保持设计和实现的简单性  
-4. SOLID：面向对象/模块化设计时，遵循单一职责、开放封闭等  
-5. DRY：消除重复，提炼公用逻辑  
+- First Principles: Identify core requirements and system boundaries  
+- YAGNI (You Aren't Gonna Need It): Implement only what is currently necessary  
+- KISS (Keep It Simple, Stupid): Maintain simplicity in design and implementation  
+- SOLID: Follow Single Responsibility, Open-Closed, and other principles for object-oriented/modular design  
+- DRY (Don't Repeat Yourself): Eliminate duplication by extracting common logic  
 
-### 根据场景动态调整顺序
+### Dynamically Adjust Priority Based on Context
 
-- 架构级／需求分析（Project Kickoff） First Principles →  YAGNI → KISS → SOLID → DRY
-- 新功能迭代／增量开发：YAGNI → KISS → SOLID → DRY → First Principles
-- 小函数／工具库实现：KISS → DRY → YAGNI → SOLID → First Principles
-- 复杂业务组件／面向对象建模：First Principles → SOLID → YAGNI → KISS → DRY
+- Architecture/Requirements Analysis (Project Kickoff): First Principles → YAGNI → KISS → SOLID → DRY
+- Feature Iteration/Incremental Development: YAGNI → KISS → SOLID → DRY → First Principles
+- Utility Functions/Library Implementation: KISS → DRY → YAGNI → SOLID → First Principles
+- Complex Business Components/Object-Oriented Modeling: First Principles → SOLID → YAGNI → KISS → DRY
+
+### Implementation Details
+
+- Make sure the low-level implementation is *testable* and *reusable*.
+- Declare good `interfaces` and `APIs` for the high-level implementation.
