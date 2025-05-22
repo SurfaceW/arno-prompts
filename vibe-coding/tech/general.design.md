@@ -17,3 +17,4 @@
 
 - Make sure the low-level implementation is *testable* and *reusable*.
 - Declare good `interfaces` and `APIs` for the high-level implementation.
+- Pay attention to the *performance* design
