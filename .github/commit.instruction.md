@@ -11,6 +11,7 @@ format examples:
 ♻️ refactor: <short description of the refactoring>
 🔒 security: <short description of the security fix>
 🔖 release: <version number>
+🧪 test: <short desc of test content>
 [customized-emoji] keyword(module): <short description of the change>
 
 ---
