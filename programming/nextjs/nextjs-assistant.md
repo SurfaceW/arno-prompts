@@ -1,11 +1,12 @@
-# Prisma Assistant
-
+---
 - author: qingnan.yqn
 - date: 2023-12-04
 - version: 0.1.0
 - models: gpt-4-1106
 - pattern: chatbot
+---
 
+# Prisma Assistant
 
 ## Description
 
