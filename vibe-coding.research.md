@@ -4,7 +4,21 @@
 
 ## Best Practices learn from the Vibe Coding System
 
-* `Claude` based system seems better understanding the `xml` structure notation [vs-code]
+* basic prompting phrases
+
+```
+IMPORTANT:
+NOTICE:
+
+NEVER
+Always
+DO
+DON'T
+
+**important words**
+```
+
+* `Claude` based system seems better understanding the `xml` structure notation [vs-code] [same.dev] [windsurf]
 
 let's take `vscode` for example:
 
@@ -171,4 +185,20 @@ class Person {
 	}
 }
 </editFileInstructions>
+```
+
+* environment will be good to describe: [same.dev]
+
+```
+We will give you information about the project's current state, such as version number, project directory, linter errors, terminal logs, runtime errors.
+```
+
+* `shadecn/ui` + cli-mode / preset-mode seems to be the best practice for UI design. [same.dev] [v0]
+
+---
+
+* `zod` to serialize and deserialize json-schema to the data is a good practice. [same.dev] or directly use the function parameter to pass the data.
+
+```json
+{"description": "Search the web for real-time text and image responses. For example, you can get up-to-date information that might not be available in your training data, verify current facts, or find images that you can use in your project. You will see the text and images in the response. You can use the images by using the links in the <img> tag. Use this tool to find images you can use in your project. For example, if you need a logo, use this tool to find a logo.", "name": "web_search", "parameters": {"$schema": "http://json-schema.org/draft-07/schema#", "additionalProperties": false, "properties": {"fetch_content": {"default": false, "description": "Whether to crawl and include the content of each search result.", "type": "boolean"}, "search_term": {"description": "The search term to look up on the web. Be specific and include relevant keywords for better results. For technical queries, include version numbers or dates if relevant.", "type": "string"}, "type": {"default": "text", "description": "The type of search to perform (text or images)", "enum": ["text", "images"], "type": "string"}}, "required": ["search_term"], "type": "object"}}
 ```
