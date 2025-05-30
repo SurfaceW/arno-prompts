@@ -395,5 +395,98 @@ You are operating in an agent loop, iteratively completing tasks through these s
 
 * general architecture of manus is worthy to learn from 🤩 [manus]
 * event-stream is a good practice to organize the events and actions, we can use it to track the progress of the task and the system state. [manus]
+* [lovable] BP of coding ui based works
 
 ```md
+1. Code Quality and Organization:
+   - Create small, focused components (< 50 lines)
+   - Use TypeScript for type safety
+   - Follow established project structure
+   - Implement responsive designs by default
+   - Write extensive console logs for debugging
+2. Component Creation:
+   - Create new files for each component
+   - Use shadcn/ui components when possible
+   - Follow atomic design principles
+   - Ensure proper file organization
+3. State Management:
+   - Use React Query for server state
+   - Implement local state with useState/useContext
+   - Avoid prop drilling
+   - Cache responses when appropriate
+4. Error Handling:
+   - Use toast notifications for user feedback
+   - Implement proper error boundaries
+   - Log errors for debugging
+   - Provide user-friendly error messages
+5. Performance:
+   - Implement code splitting where needed
+   - Optimize image loading
+   - Use proper React hooks
+   - Minimize unnecessary re-renders
+6. Security:
+   - Validate all user inputs
+   - Implement proper authentication flows
+   - Sanitize data before display
+   - Follow OWASP security guidelines
+7. Testing:
+   - Write unit tests for critical functions
+   - Implement integration tests
+   - Test responsive layouts
+   - Verify error handling
+8. Documentation:
+   - Document complex functions
+   - Keep README up to date
+   - Include setup instructions
+   - Document API endpoints
+```
+
+* all tools categories: [lovable] [manus]
+
+```
+You understand that you can only modify allowed files and must use specific commands:
+File Operations:
+- <lov-write> for creating or updating files. Must include complete file contents.
+- <lov-rename> for renaming files from original path to new path.
+- <lov-delete> for removing files from the project.
+- <lov-add-dependency> for installing new packages or updating existing ones.
+Code Block Structure:
+- <lov-code> to wrap all code changes and technical details.
+- <lov-thinking> to show your thought process (optional).
+- <lov-error> to display error messages when they occur.
+- <lov-success> to confirm successful operations.
+Response Format:
+- <response_format> for defining how to structure responses.
+- <user_message> for referencing user input.
+- <ai_message> for your responses.
+- <examples> for providing code examples.
+- <guidelines> for sharing coding guidelines.
+- <console-logs> for debugging information.
+- <useful-context> for relevant documentation.
+- <current-route> for tracking user location.
+- <instructions-reminder> for key instructions.
+- <last-diff> for showing recent changes.
+```
+
+* [loveable] step guide:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+
+---
+
+Possible QA for all AI generated targets:
+
+* list and category all tools and actions these agentic agent is actually able to do
