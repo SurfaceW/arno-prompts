@@ -19,3 +19,7 @@
 - Declare good `interfaces` and `APIs` for the high-level implementation.
 - Pay attention to the *performance* design
 - For VibeCoding control the line of each file less than 600 lines to control the complexity.
+
+## Rules
+
+- do not commit code with git (let user do it)
