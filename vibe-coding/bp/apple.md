@@ -3,6 +3,10 @@ This is a project for **Apple Cross-Platform Development** use *Swift* / *SwiftU
 This project is an experimental project for iOS26 beta, MacOSX26 beta, ...
 When you use build command, the target device name is iPhone 16 Pro
 
+## Rules
+
+* rule xcode build to test your modifications to pass build
+
 ## Dir
 
 * `Model` the data model for the app
@@ -26,4 +30,3 @@ When you use build command, the target device name is iPhone 16 Pro
 
 The build command is:
 xcodebuild -project e-studio-dots.xcodeproj -scheme e-studio-dots -destination 'platform=iOS Simulator,name=iPhone 16' build
-
