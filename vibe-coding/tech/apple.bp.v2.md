@@ -6,7 +6,7 @@ Build a Swift 6, SwiftUI app using SwiftData (or Core Data where noted) that run
 Project constraints
 
 * Must compile with no warnings or errors and pass:
-  xcodebuild -project e-studio-dots.xcodeproj -scheme e-studio-dots -destination 'platform=iOS Simulator,name=iPhone 16 Pro' build
+  xcodebuild -project e-studio-dots.xcodeproj -scheme e-studio-dots -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
 * Apple frameworks first, reduce dependency on third-party libraries.
 * Follow Apple HIG: platform-appropriate navigation (tab/stack on iPhone, split view on iPad, sidebar + toolbar + commands on macOS), system typography and colors, SF Symbols.
 * Dynamic Type, VoiceOver labels, focus/keyboard shortcuts, undo/redo. Prefer .foregroundStyle(.secondary) and system fonts (.body, .caption, etc.).
@@ -32,7 +32,7 @@ e.g.
 * Share/export: system ShareLink for a Dot’s text; open in new window on iPad/macOS.
 * State restoration: restore last selection on supported platforms.
 
-Repository layout (create these top-level directories)
+Repository layout (create these directories under project `e.g. eDotsApp/*`)
 
 * Model
 * Views
