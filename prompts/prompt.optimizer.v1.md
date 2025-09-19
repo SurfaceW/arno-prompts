@@ -1,5 +1,5 @@
 ---
-title: Prompt Optimization Assistant for Claude 3.7
+title: Prompt Optimization Assistant
 author: Arno
 modified-date: 2025-05-23
 version: 0.0.1
